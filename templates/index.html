@@ -5,11 +5,12 @@
   <meta charset="UTF-8">
   <title>Earthquake Dashboard</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-default" style="background-color:#1a1a1a;">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -19,83 +20,133 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-        <a class="navbar-brand" href="index.html">Earthquakes</a>
+        <a style="color:	white; font: 28px verlag-book, san-serif; " class="navbar-brand" href="index_final.html">Earthquakes</a>
       </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Earthquake News<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <li><a href="{{ url_for('news1') }}">Earthquakes News Scrape</a></li>
-                <li><a href="{{ url_for('news2r') }}">Earthquakes Two</a></li>
-                <li><a href="{{ url_for('news3r') }}">Earthquake News in South America</a></li>
-                <li><a href="{{ url_for('news4r') }}">Earthquake News Worldwide</a></li>
-                <!-- <li><a href="News5.html">Earthquake Test Bed</a></li>  -->
-            </ul>
-          </li>
-          <li><a href="{{ url_for('maps1') }}">Earthquake Map</a></li>
-          <li><a href="{{ url_for('pics1') }}">Earthquake Pictures</a></li>
-          <li><a href="{{ url_for('data1') }}">Earthquake Data</a></li>
-          
-        </ul>
-      </div>
+<!-- Add a logo -->
+    <!-- Trying to cneter logo not working -->
+      <div class="topnav-centered">
+        <a class="Logo" href="index_final.html" class="active">
+         <img src="https://lh3.googleusercontent.com/RxFF6QpRWCZS6DwLJVS5mp-FMH9tbCobgSJY1uDGst5thfbO7n9ta5P3QdT8cx2DEXrcoYan1RHaIen8zMTZSkVF73oazWfMksvZ7OnJDJBL9OmyRI-zpBrLc0VSfgUtUAR4Z9Fg16NlhZXOY2Gu_VOURg67aJXT3OfMq0W2dc6ez1Bnakihb4nlR4jUD9fPqgYSKoVi0YxTuNB0gEEsJm_b0yNRILK-5Jtu7aHViof_45hM1USM0MlfYPnkm3T-Da00L3ZnAnYN2812EfhKIubhwNZa3EYBDkSl0j5EjJ0b03SXIgrevZ8W2fWXXU3cmbQmB6ItJlPHn9QfDElJYVsq4vmvu_ZnbJqEWrigOzK-NYpZcyNCHW9LsGxrV14igvyCa2VqBCdq5F_sa7AuA6HeolBRKI1NRvtDuiUVnyqzAmctmkMr_BZNRf_x54eVryfzOGGmNuyWRFVtpa8weAXn6siQxZsEkJfWI809iw4e4bS610mJY_-wDXMVwQQ9uxbyS1aUntS5ticeAkwHarxWYLCvKvd5-BW46zjOBkJ0VVYmnYzI6wHFO7dvOa7X16bN9jjMvhLcN200ZCE7MsdkHyOaVigdBqCMXese4hM5a5w2IQJP8Fxz9aXf0cY6UYpLh03hAzq9wf_9cRrs3XALhvM9e5n9OG7uMb-2e9G-qzugJcXrMiQ=w328-h165-no" class="logo" width="100" height="50" alt="centered image" class="active">
+        </a>
+      </div> 
+      
       <!-- /.navbar-collapse -->
     </div>
     <!-- /.container-fluid -->
-  </nav>
+    <!--Adding the header image-->
+    <div id="Content_Content_Content_Feature_Feature" class="Feature Overlap">
+	
+        <div>
+            <div>
+                <!-- <h1 class="Title">Natural Disasters</h1> -->
+                
+                
+                
+            
+       
+        <img src="https://lh3.googleusercontent.com/MxjbVarzGu63AdZ7T37rWkKN8wazUxqKS7455C8bEbJXh7TlZ-rtdalzGepTcyk5szmS4lbqi80fHdF5hMDO8_UIQw8J39xjQxNKM8jZbYw40mFcUb8CuMRBgWrc0GW4zAv_AGGTFFnRkV8DZIgl5q8UKYF6Z8ZczNo7DSvwat49LSYG98bgDxGP1Ygf8rC9Tu0pisgKyKtSonjSdPNPC9vpMTFT6J_f-LHetnnTUAWGgVfBbLIRdOv4DhGqr6uHzKu7oQXZ94JV7mm55lk1xl4dC9pEu_WzE-B6aCOA6mvAel3ALOAKr0Gq4ZgPQQu9i9iz2YV1QwgjTc2wkenUq34QgOtD7mO5Irillo-OExXnvrQWm0oYBnZ2lOfz-95-k0Ikj0odianFm9lfAEmDJDIeyPBYgMo6fb1p6sjTgL8Se9OeQEOF4F3vqElZJYqk8OXs1iTlWdHZmAY2wdScUuZXDKItk1f0zKItPwYdD5A71KHpiL7BtUPZvafKPXleNmpdhyCVmYK0XIh-ROKeIou-8l2WES-15TOOrdRJT8ng1OB1aQsBQrUEoWA-tO6M68vUCy3I2nCanj6T-V5Z1smJd9xkKgt79C24qISQzvxLVP2zkBznN-3wOnmd7kN8Ooq0iCtUGPgULreM9V_wDY10d4Il9kDkQAf4r_f2CxE88NbdAcVX8PE=w992-h698-no"width="1270" height="400" alt="centered image">
+    
+        <!-- <img src="https://natgeo.imgix.net/subjects/headers/ND header (1).jpg?auto=compress,format&amp;w=1920&amp;h=960&amp;fit=crop"> -->
+        <!-- auto=compress, format&amp; w="1920&amp"; h="960&amp"; fit=crop -->
+        <!-- Title -->
+			<title>Natural Disasters - National Geographic</title>
+        
+    </div>
+    <!-- This is where we create a mid-page navbar -->
+   
+             
+             <!-- NG example test** -->
+
+
+      
+      <!-- /.navbar-collapse-->
+    </div>
 
   <!-- Creates the Overall Grid -->
-  <div class="container">
-
+  <div class="col-md-12" style="background-color: #1a1a1a;" style="color:	white; font: 28px verlag-book, san-serif; " >
+ <div>
+            <div> 
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav background-color= #">
+          <li class="dropdown" style="color:	white; font: 20px verlag-book, san-serif; " >
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Earthquake News<span class="caret"></span></a>
+            <ul class="dropdown-menu" >
+                <li style="color:	white; font: 20px verlag-book, san-serif;"> <a href="News1.html">Earthquakes News in Americas</a></li>
+                <li style="font: 20px verlag-book, san-serif;"> <a href="News2.html">Earthquakes News in Asia</a></li>
+                <li> <a href="News3.html">Earthquake News in South America</a></li>
+                <li> <a href="News4.html">Earthquake News Worldwide</a></li>
+                <li> <a href="News5.html">Earthquake Test Bed</a></li> 
+            </ul>
+          </li>
+          <li><a href="{{ url_for('maps1') }}">Earthquake Map</a></li>
+          <li><a href="{{ url_for('about') }}">Earthquake About</a></li>
+          <li><a href="{{ url_for('data1') }}">Earthquake Data</a></li>
+          
+          <!-- <li style="color:	white; font: 20px verlag-book, san-serif; "> <a href="about.html">About</a></li>
+          <li style="color:	white; font: 20px verlag-book, san-serif; "><a href="pics.html">Earthquake Pictures</a></li>
+          <li style="color:	white; font: 20px verlag-book, san-serif; "><a href="data.html">Earthquake Data</a></li>
+          <li style="color:	white; font: 20px verlag-book, san-serif; "> <a href="maps.html">Earthquake Map</a></li>
+           -->
+        </ul>
+      </div>
     <div class="row">
 
-        <div class="col-md-6 pad top"> <br>
-          <h3>Summary: Earthquakes in our lives</h3> <br>
+        <div class="col-md-6 pad top" > <br>
+          <h3 style="color:	white; font: 28px verlag-book, san-serif; " >Natural Disasters:
+             Earthquakes</h3> <br>
         </div>
 
-        <div class="col-md-6 pad top"> <br>
-          <h3>Earthquake in the news</h3> <br>
-        </div>
+       
 
       </div>
 
-    <div class="row">
-
-        <div class="col-md-6 pad top"> <br>
-
-          <div class="pull-left">
-              <img src="/input/Fig1.png" alt="Earthquakes In our Life" width="200" height="175">
-          </div>
-
-          <div class="text-left">
-            <p> The purpose of this project was to analyze how Earthquakes affects us.  To accomplish this analysis, we first pulled data from numerous sources
-                such as the US Geological Survey, news sites around the world and a 24 year trove of earthquake activity. </p> <br>
-            <p> After assembling the dataset, D3 and Leaflet was used to plot earthquakes worldwide with infrastructure and hazardous correlation layers. This has the added 
-                benefit of functionality to animate all fourty four years of timeline.
-                All fourty four years of worldwide earthquake data is searchable to vistors of the website. 
-                Additionally, some of the most popular earthquake information is web scrapable upon demand by user with the click of a button.
-                Future interations of this website will include machine learning data which will try to predict future earthquakes based
-                upon previous earthquake data. </p>
+   
+ <!-- Media section -->
+ <!-- Test -->
+ <head>
+  <link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
+  <style>
+  body {
+   font-family: 'Allerta Stencil';font-size: 22px;
+  }
+  </style>
+  </head>
+  <body>
+    <!-- Test -->
+        <div class="col-md-12"> <br>
+            <br>
+            
+            <h3 style="color:	white; font-family='Allerta Stencil' 50px ; text-align: center; align-content: center;; ">Earthquake MEDIA </h3> <br>
+          <div class="">
+              <!-- image 1 Myths about earthquakes and in to myth site -->
+              <div class="container">
+                    <a href="http://uraha.de/de/?p=390&lang=en"><img src="https://www.bgs.ac.uk/discoveringGeology/hazards/earthquakes/images/restlessGods.jpg" alt="Pictures of Earthquakes" width="375" height="343" style="color: yellow; font: 50px">Myths></a>
+                    <div class="overlay">
+                      <div style="color: yellow; font: 50px; text-align: left;">Myths</div>
+                    </div>
+                  </div>
+            <!-- <a href="http://uraha.de/de/?p=390&lang=en"><img src="https://www.bgs.ac.uk/discoveringGeology/hazards/earthquakes/images/restlessGods.jpg" alt="Pictures of Earthquakes" width="33%" height="33%"></a> -->
+          <div class="col-md-6">
+            <div class="row">
+            <!-- image 2 EQ Stats & link  -->
+            <a href="https://worldwidewanderings.net/blog/2019/01/06/latest-update-on-earthquake-statistics/"><img src="http://worldwidewanderings.net/blog/wp-content/uploads/2019/01/Earthquakes.png" alt="Mapping of Earthquakes" width="375" height="343"></a>
             </div>
-
-        </div>
-
-        <div class="col-md-3 pad top"> <br>
-
-          <div class="pull-right">
-            <a href="pics.html"><img src="/input/Fig2.png" alt="Pictures of Earthquakes" width="100%" height="100%"></a>
-            <a href="maps.html"><img src="/input/Fig3.png" alt="Mapping of Earthquakes" width="100%" height="100%"></a>
           </div>
+        </div>
 
        </div>
 
-       <div class="col-md-3 pad top"> <br>
+       <div class="col-md-12 pad top"> <br>
 
-        <div class="pull-right">
-          <a href="data.html"><img src="/input/Fig4.png" alt="Earthquake Data Visualizations" width="100%" height="100%"></a>
-          <a href="news1.html"><img src="/input/Fig5.png" alt="Earthquake News" width="100%" height="100%"></a>
+        <div>
+          <a href="https://www.volcanodiscovery.com/earthquakes/today.html"><img src="https://img.volcanodiscovery.com/maps/earthquakes-latest.jpg" alt="Earthquake Data Visualizations" width="33%" height="40%"></a>
+
+          <a href= "news3.html"> <iframe width="500" height="180" src="https://www.youtube.com/embed/gH045WGMTAI " frameborder="0" allowfullscreen ng-show="showvideo"></iframe>>
+               <!-- <iframe width="420" height="315" -->
+          <!-- src="https://youtu.be/gH045WGMTAI"> --> 
+          </iframe>
+          <!-- Img 5 what to do if caught in an earthquake -->
+          <a href="news1.html"><img src="https://www.trbimg.com/img-573cd237/turbine/la-1463603886-snap-photo/2000" alt="Earthquake News" width="65%" height="25%"></a>
         </div>
 
       </div>

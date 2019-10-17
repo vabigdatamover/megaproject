@@ -40,9 +40,9 @@ def data1():
 def maps1():
     return render_template("maps.html")
 
-@app.route("/pics1")
-def pics1():
-    return render_template("pics.html")
+@app.route("/about")
+def about():
+    return render_template("about.html")
 
 
 @app.route("/news1")
