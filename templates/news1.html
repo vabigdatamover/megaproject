@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Naturl Disaster News</title>
+	<link rel="stylesheet" href="{{ url_for('static',filename= './css/style.css') }}">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 ​
@@ -34,8 +35,7 @@
 						<ul class="dropdown-menu">
 							<li><a href="{{ url_for('news1') }}">Earthquakes News Scrape</a></li>
 							<li><a href="{{ url_for('news2r') }}">Earthquakes Two</a></li>
-							<li><a href="{{ url_for('news3r') }}">Earthquake News in South America</a></li>
-							<li><a href="{{ url_for('news4r') }}">Earthquake News Worldwide</a></li>
+							
 							<!-- <li><a href="News5.html">Earthquake Test Bed</a></li>  -->
 						</ul>
 					  </li>

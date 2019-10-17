@@ -5,9 +5,6 @@ import scrape_quakes
 # Create an instance of Flask
 app = Flask(__name__)
 
-## Use flask_pymongo to set up mongo connection
-#app.config["MONGO_URI"] = "mongodb://localhost:27017/mars_app"
-#mongo = PyMongo(app)
 
 # Use PyMongo to establish Mongo connection
 mongo = PyMongo(app, uri="mongodb://localhost:27017/mars_app")
@@ -20,24 +17,17 @@ def home():
     return render_template("index.html")
 
 
-@app.route("/news2r")
-def news2r():
+@app.route("/new2")
+def news2():
     return render_template("news2.html")
 
-@app.route("/new3r")
-def news3r():
-    return render_template("news3.html")
 
-@app.route("/new4r")
-def news4r():
-    return render_template("news4.html")
-
-@app.route("/data1")
-def data1():
+@app.route("/data")
+def data():
     return render_template("data.html")
 
-@app.route("/maps1")
-def maps1():
+@app.route("/maps")
+def maps():
     return render_template("maps.html")
 
 @app.route("/about")
