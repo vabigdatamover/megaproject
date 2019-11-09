@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- <meta charset="UTF-8"> -->
+  <title>Earthquake Dashboard</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="{{ url_for('static',filename= './css/style.css') }}"> -->
+</head>
+<!-- Test This changes the font -->
+
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
+  <style>
+    body {
+      font-family: 'Allerta Stencil';
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Test -->
+  <!-- start test -->
+  
+<!-- test -->
+  <body>
+    <nav style="background-color:#1a1a1a;">
+      <div>
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a style="color:	white; font: 28px Allerta Stencil; " class="navbar-brand" href="/">Earthquakes</a>
+        </div>
+        <!-- Add a logo -->
+        <!-- Trying to cneter logo not working -->
+        <div class="topnav-centered">
+          <a class="Logo" href="/" class="active">
+            <img src="/static/Logo1.png" class="logo" width="100" height="50" alt="centered image" class="active">
+          </a>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav background-color= #">
+              <li class="dropdown" style="color:	white; font: 20px Allerta Stencil; ">
+
+              </li>
+              <!--  -->
+              <li> <a href="{{ url_for('news1') }}">Earthquake
+                  News</a></li>
+              <li> <a href="{{ url_for('aboutr') }}">About</a>
+              </li>
+              <li><a href="{{ url_for('data1') }}">Earthquake
+                  Data</a></li>
+              <li> <a href="{{ url_for('maps1') }}">Earthquake
+                  Map</a></li>
+
+
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <!--Adding the header image-->
+
+    <div class="container1">
+      <img src="/static/homepphotos.jpg" width="1270" height="450" alt="centered image">
+      <!-- <div class="bottom-left">Natural Disasters<br>Earthquakes</div> -->
+    </div>
+    </div>
+    <!-- This is where we create a mid-page navbar -->
+
+    </div>
+
+    <!-- Creates the Overall Grid -->
+    <div class="col-md-12" style="background-color: #1a1a1a;" style="font: 28px Allerta Stencil; ">
+      <div>
+        <div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="padding-left: 2.5in; padding-right: 1.5in;">
+            <ul class="nav navbar-nav background-color= #">
+              <li class="dropdown" style="color:	white; font: 20px Allerta Stencil; ">
+
+              </li>
+              <!--  -->
+              <li style="color:	white; font: 20px Allerta Stencil; "> <a href="{{ url_for('news1') }}">Earthquake
+                  News</a></li>
+              <li style="color:	white; font: 20px Allerta Stencil; "> <a href="{{ url_for('aboutr') }}">About</a>
+              </li>
+              <li style="color:	white; font: 20px Allerta Stencil; "><a href="{{ url_for('data1') }}">Earthquake
+                  Data</a></li>
+              <li style="color:	white; font: 20px Allerta Stencil; "> <a href="{{ url_for('maps1') }}">Earthquake
+                  Map</a></li>
+
+
+            </ul>
+          </div>
+          <div class="row">
+
+          </div>
+
+
+          <!-- Media section -->
+          <div class="col-md-12"> <br>
+            <br>
+            <div class="aligncenter"></div>
+            <h3 style="color:	white; font: 28px Allerta Stencil; text-align: center; ">Earthquake <b>MEDIA </b> </h3>
+            <br>
+
+
+            <!-- Media Section for index page  -->
+            <div class="row_hp">
+              <div class="column_hp" style="padding-left: 1in; padding-right: 1in;">
+                <!-- image 1 Myths about earthquakes and in to myth site -->
+                <a href="http://uraha.de/de/?p=390&lang=en">
+                  <img src="https://www.bgs.ac.uk/discoveringGeology/hazards/earthquakes/images/restlessGods.jpg"
+                    alt="Pictures of Earthquakes" width="320" height="343"></a>
+                <!-- image 2 EQ Stats & link  -->
+                <a href="https://worldwidewanderings.net/blog/2019/01/06/latest-update-on-earthquake-statistics/">
+                  <img src="http://worldwidewanderings.net/blog/wp-content/uploads/2019/01/Earthquakes.png"
+                    alt="Earthquakes Statistics" width="320" height="343"></a>
+                
+                    <a href="{{ url_for('news1') }}"><img src="/static/Photos/equakes_photo_abouts_page.png" width="320" height="343"></a>
+                    
+
+
+
+              </div>
+            </div>
+
+            <div class="column_hp" style="padding-left: 1in; padding-right: 1in;">
+              <a href="https://www.dummies.com/education/science/what-are-earthquakes/"><img
+                  src="/static/Photos/image_4_abouts_page.jpg" alt="Earthquake Data Visualizations" width="320"
+                  height="343"></a>
+
+              <a href="https://www.ready.gov/earthquakes"><img
+                  src="https://img.volcanodiscovery.com/maps/earthquakes-latest.jpg" alt="Earthquake Data " width="320"
+                  height="343"></a>
+
+              <a href="https://www.dummies.com/education/science/what-are-earthquakes/"><img
+                  src="/static/Photos/EQexplained.jpg" alt="Earthquake Data Visualizations" width="320"
+                  height="343"></a>
+              <!-- Img 5 what to do if caught in an earthquake -->
+              <a
+                href="https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/earthquake.html"><img
+                  src="https://www.trbimg.com/img-573cd237/turbine/la-1463603886-snap-photo/2000" alt="Earthquake News"
+                  width="60%" height="30%"></a>
+
+                  <a href="{{ url_for('maps1') }}"><img src="/static/Photos/ringoffire.gif" width="320" height="270"></a>
+
+              <a href="/"> <iframe width="90%" height="100%" src="https://www.youtube.com/embed/gH045WGMTAI "
+                  allowfullscreen ng-show="showvideo" style="padding-top: 7mm;"></iframe>
+            </div>
+          </div>
+        </div>
+        <!-- End of media section  -->
+
+      </div>
+
+
+
+    </div>
+    </body>
+    <footer>
+    <div class="text-center copy-right-text" style="background-color: #1a1a1a; text-emphasis-color: #39B7CD;">
+        © 2019 DataLake, Inc. All Rights Reserved. <a href="/">Privacy Policy</a>
+      </div>
+    </footer>
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</html>
