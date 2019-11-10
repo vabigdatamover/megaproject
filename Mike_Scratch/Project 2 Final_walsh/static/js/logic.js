@@ -10,7 +10,7 @@ var queryVolcanoUrl = "https://data.humdata.org/dataset/a60ac839-920d-435a-bf7d-
 
 var oilFieldsJSON = "https://raw.githubusercontent.com/carnegieendowment/oil-climate-index-2/master/app/assets/data/oilfields.geojson"
 
-var clustersJSON = "https://raw.githubusercontent.com/vabigdatamover/megaproject/master/input/earthquakes1970-2014-dbscan-processed.json"
+var clustersJSON = "https://raw.githubusercontent.com/vabigdatamover/megaproject/master/Mike_Scratch/Sandbox_Mike/quake_geoJSON_fmt.json"
 
 
 
@@ -40,13 +40,16 @@ d3.json(queryUrl, function (data) {
 
 //return color based on value
 function getColor(x) {
-  return x > 5 ? "#f40202" :
-    x > 4 ? "#f45f02" :
-      x > 3 ? "#f49702" :
-        x > 2 ? "#F4bc02" :
-          x > 1 ? "#d8f402" :
-            x > 0 ? "#93f402" :
-              "#FFEDA0";
+  return x > 8 ? "#0202f4" :
+    x > 7 ? "#9302f4" :
+      x > 6 ? "#f402f4" :
+        x > 5 ? "#f40202" :
+          x > 4 ? "#f45f02" :
+            x > 3 ? "#f49702" :
+              x > 2 ? "#F4bc02" :
+                x > 1 ? "#d8f402" :
+                  x > 0 ? "#93f402" :
+                    "#FFEDA0";
 }
 
 
@@ -57,6 +60,12 @@ function createFeatures(earthquakeData, plateData, volcanoData, oilfieldData, cl
     layer.bindPopup("<h3>" + feature.properties.place +
       "</h3><hr><p>" + new Date(feature.properties.time) + "</p>" +
       "</h3><hr><p>Magnitude: " + feature.properties.mag + "</p>");
+  }
+
+  function onEachFeatureC(feature, layer) {
+    layer.bindPopup("<h3>" + feature.properties.place +
+      "</h3><hr><p>" + new Date(feature.properties.time) + "</p>" +
+      "</h3><hr><p>Magnitude: " + feature.properties.Magnitude + "</p>");
   }
 
   function onEachFeatureV(feature, layer) {
@@ -104,11 +113,11 @@ function createFeatures(earthquakeData, plateData, volcanoData, oilfieldData, cl
 
 
   var clusters = L.geoJSON(clusterData, {
-    onEachFeature: onEachFeatureV,
+    onEachFeature: onEachFeatureC,
     pointToLayer: function (feature, latlng) {
       var geojsonMarkerOptions = {
-        radius: 3,
-        fillColor: "yellow",
+        radius: +feature.properties.Magnitude * 1,
+        fillColor: getColor(feature.properties.Magnitude),
         color: "yellow",
         weight: 1,
         opacity: 1,
@@ -119,8 +128,8 @@ function createFeatures(earthquakeData, plateData, volcanoData, oilfieldData, cl
 
   });
 
-  
- console.log(clusters);
+
+  console.log(clusters);
 
   var plates = L.geoJson(plateData, {
     style: function () {
@@ -151,7 +160,7 @@ function createFeatures(earthquakeData, plateData, volcanoData, oilfieldData, cl
   });
 
 
- 
+
 
   // Sending our earthquakes layer to the createMap function
   createMap(earthquakes, plates, volcanos, oilfields, clusters);
@@ -231,7 +240,8 @@ function createMap(earthquakes, plates, volcanos, oilfields, clusters) {
     },
 
 
-    layers: [streetmap, earthquakes, plates, volcanos, clusters, oilfields]
+    // Code to set which data to display -- layers: [streetmap, earthquakes, plates, volcanos, clusters, oilfields]});   
+    layers: [streetmap, earthquakes, plates, volcanos, oilfields]
   });
 
   // Pass our map layers into our layer control
@@ -270,7 +280,7 @@ function createMap(earthquakes, plates, volcanos, oilfields, clusters) {
 
   legend.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'info legend'),
-      grades = [0, 1, 2, 3, 4, 5],
+      grades = [0, 1, 2, 3, 4, 5, 6, 7, 8],
       labels = [];
 
     div.innerHTML += 'Magnitude<br><hr>'
