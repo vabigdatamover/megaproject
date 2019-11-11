@@ -62,12 +62,15 @@ function createFeatures(earthquakeData, plateData, volcanoData, oilfieldData, cl
       "</h3><hr><p>Magnitude: " + feature.properties.mag + "</p>");
   }
 
+  // Popup for Cluster points
   function onEachFeatureC(feature, layer) {
-    layer.bindPopup("<h3>" + feature.properties.place +
+    layer.bindPopup("<h3>" + feature.properties.city +
       "</h3><hr><p>" + new Date(feature.properties.time) + "</p>" +
       "</h3><hr><p>Magnitude: " + feature.properties.Magnitude + "</p>");
   }
 
+
+  // Popup for Volcanos
   function onEachFeatureV(feature, layer) {
     layer.bindPopup("<h3>" + feature.properties.V_Name +
       "</h3><hr><p>Country: " + feature.properties.Country + "</p>" +
