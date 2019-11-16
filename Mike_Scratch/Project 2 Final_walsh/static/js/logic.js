@@ -10,7 +10,7 @@ var queryVolcanoUrl = "https://data.humdata.org/dataset/a60ac839-920d-435a-bf7d-
 
 var oilFieldsJSON = "https://raw.githubusercontent.com/carnegieendowment/oil-climate-index-2/master/app/assets/data/oilfields.geojson"
 
-var clustersJSON = "https://raw.githubusercontent.com/vabigdatamover/megaproject/master/Mike_Scratch/Sandbox_Mike/quake_geoJSON_fmt.json"
+var clustersJSON = "https://raw.githubusercontent.com/Lydilydz/megaproject_GOLD/master/Supplemental_Code/Output/earthquakes-dbscan-cluster-processed_geoJSON_fmt.json"
 
 
 
